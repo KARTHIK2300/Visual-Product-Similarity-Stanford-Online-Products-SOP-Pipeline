@@ -120,32 +120,32 @@ Evaluated against the Stanford Online Products (SOP) benchmark on the official t
 | **Model Architecture** | Pretrained PyTorch ResNet50 (2048-dim vectors) |
 | **Evaluated Images** | 60,502 product items |
 | **Index Type** | FAISS IndexFlatIP |
-| **Overall Precision@10** | 0.7751 (77.51%)[cite: 2] |
-| **Overall Recall@10** | 0.0015[cite: 2] |
-| **Average Query Latency** | < 15 ms[cite: 2] |
+| **Overall Precision@10** | 0.7751 (77.51%) |
+| **Overall Recall@10** | 0.0015 |
+| **Average Query Latency** | < 15 ms |
 
 ### Per-Category Precision@10 Breakdown
 
 | Product Category | Image Count (n) | Precision@10 |
 | :--- | :--- | :--- |
-| **Bicycle** | 4,145 | 0.9416[cite: 2] |
-| **Mug** | 6,895 | 0.8967[cite: 2] |
-| **Stapler** | 4,019 | 0.8129[cite: 2] |
-| **Kettle** | 5,101 | 0.8111[cite: 2] |
-| **Cabinet** | 6,220 | 0.8019[cite: 2] |
-| **Sofa** | 3,959 | 0.7958[cite: 2] |
-| **Coffee Maker** | 4,713 | 0.7633[cite: 2] |
-| **Fan** | 3,003 | 0.7529[cite: 2] |
-| **Lamp** | 6,226 | 0.7425[cite: 2] |
-| **Toaster** | 4,357 | 0.7064[cite: 2] |
-| **Chair** | 6,226 | 0.6823[cite: 2] |
-| **Table** | 5,638 | 0.6136[cite: 2] |
+| **Bicycle** | 4,145 | 0.9416 |
+| **Mug** | 6,895 | 0.8967 |
+| **Stapler** | 4,019 | 0.8129 |
+| **Kettle** | 5,101 | 0.8111 |
+| **Cabinet** | 6,220 | 0.8019 |
+| **Sofa** | 3,959 | 0.7958 |
+| **Coffee Maker** | 4,713 | 0.7633 |
+| **Fan** | 3,003 | 0.7529 |
+| **Lamp** | 6,226 | 0.7425 |
+| **Toaster** | 4,357 | 0.7064 |
+| **Chair** | 6,226 | 0.6823 |
+| **Table** | 5,638 | 0.6136 |
 
 ### Qualitative & Analytical Insights
 
-* **Semantic Power of CNN Representations:** Deep convolutional embeddings drastically outperform hand-crafted color/texture descriptors (which baseline at ~0.21), reaching >94% precision in structurally distinct categories like bicycles[cite: 2].
-* **Geometric Distinctiveness:** Objects with rigid, unique geometries (bicycles, mugs, staplers) score highest, whereas categories with broad shape variations (tables, chairs) show lower category precision due to visual overlap[cite: 2].
-* **Low Macro Recall Context:** The low Recall@10 (0.0015) is expected given the large class pool (thousands of images per category compared to a top-10 retrieval cutoff)[cite: 2].
+* **Semantic Power of CNN Representations:** Deep convolutional embeddings drastically outperform hand-crafted color/texture descriptors (which baseline at ~0.21), reaching >94% precision in structurally distinct categories like bicycles.
+* **Geometric Distinctiveness:** Objects with rigid, unique geometries (bicycles, mugs, staplers) score highest, whereas categories with broad shape variations (tables, chairs) show lower category precision due to visual overlap.
+* **Low Macro Recall Context:** The low Recall@10 (0.0015) is expected given the large class pool (thousands of images per category compared to a top-10 retrieval cutoff).
 
 ---
 
